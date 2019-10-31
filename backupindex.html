@@ -1,0 +1,191 @@
+<html>
+  <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140137723-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140137723-1');
+  
+  function promo(event) {
+  ga('send', 'event', {
+    eventCategory: 'Buttons',
+    eventAction: 'promo',
+    eventLabel: event.target.href
+  });
+}
+</script>
+    
+    <title>School Timer</title>
+    <meta name="description" content="This is a Timer for School meant for students to be able to know when each class ends. ">
+    <meta name="keywords" content="Timer,School,School Timer,Timer School,Timer for School,School Schedule,Timer Schedule,Stopwatch,Stopwatch School,schooltimer,schooltimers,stopwatch for school,school stopwatch,schedule, school schedule">
+  
+    <link rel="icon" href="https://cdn.glitch.com/b41ac94d-c334-488c-802a-1b6b7a8c75e8%2Fclock_fUV_icon.ico">
+
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro/dist/iro.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140137723-1"></script>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/slider.css">
+    <link rel="stylesheet" href="CSS/tooltip.css">
+    <link rel="stylesheet" href="CSS/timeEnd.css">
+    <link rel="stylesheet" href="CSS/button.css">
+    <link rel="stylesheet" href="CSS/checkmark.css">
+    <link rel="stylesheet" href="CSS/random.css">
+    <link rel="stylesheet" href="CSS/selector.css">
+    <link rel="stylesheet" href="CSS/animatedButtons.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   
+  </head>
+  <body onload="schooltimer(); mobile(); onloadtest(); checkToggle();" scroll="no" style="overflow: hidden">
+    <center>
+      <div id="alertOverlay">
+        <center>
+          <div id="tabTitleOverlay">
+            <p id="alertText">
+              Tab Title Enabled
+            </p>
+          </div>
+        </center>
+      </div>
+      <div id="lunchAlertOverlay">
+        <center>
+          <div id="lunchTitleOverlay">
+            <p id="lunchAlertText">
+              Lunch Mode Enabled
+            </p>
+          </div>
+        </center>
+      </div>
+      <div id="mydiv">
+        <button id="closeButton" class="closeButton" onclick="moveColor()">&times</button>
+        <div id="mydivheader">
+          <h2>Color Picker</h2>
+        </div>
+        <br>
+        <div id="color-picker-container"></div>
+        <div color="white" id="values"></div>
+        <select id="colorOptions" onclick="selectColorElement()">
+        <option id="myOption" value="background">Background</option>
+        <option value="accent">Accent</option>
+        <option value="text">Text</option>
+        <option value="buttonTxt">Button Text</option>
+        <option value="sidebar">Sidebar</option>
+        <option value="sidebarTxt">Sidebar Text</option>
+        <option value="settingE">Setting Enabled</option>
+        <option value="settingETxt">Setting Enabled Text</option>
+        <option value="settingD">Setting Disabled</option>
+        <option value="settingDTxt">Setting Disabled Text</option>
+      </select>
+      <br>
+      <p id="preset">Preset Themes</p>
+      <select id="presets" onclick="selectPreset()">
+        <option id="presetDefault">Default</option>
+        <option id="presetLight">Light</option>
+        <option id="presetStealth">Stealth</option>
+        <option id="presetBlueBlack">Blue</option>
+        <option id="yellow">Yellow</option>
+        <option id="Green">Green</option>
+        <option id="Aqua">Aqua</option>
+        <option id="Blue/Pink">Blue/Pink</option>
+        <option id="Cool">Cool</option>
+        <option id="presetYellowBlack">Neutral</option>
+        <option id="presetStrange">Terrible</option>
+      </select>
+    </div>
+  </center>
+  <form id="mainForm" name="mainForm">
+    <div id="dayContainer">
+      <center>
+        <p id="schoolScheduleTxt">Schedule</p>
+        <div id="rates">
+          <center>
+            <div class="tooltipA">  <span class="tooltiptextA">Normal</span> <p id="daySelectTxt">A</p><button type="button" id="buttonA" class="checkButton buttonA" onclick="Apressed();"><center><div id="Adiv">&nbsp</div></center></button> </div>
+          <br>
+            <div class="tooltip">  <span class="tooltiptext">Homeroom</span>  <p id="daySelectTxt2">B</p><button type="button" id="buttonB" class="checkButton buttonB" onclick="Bpressed();"><center><div id="Bdiv">&nbsp</div></center></button> </div>
+          <br>
+            <div class="tooltip">  <span class="tooltiptext">Early Dismissal</span>   <p id="daySelectTxt3">C</p><button type="button" id="buttonC" class="checkButton buttonC" onclick="Cpressed();"><center><div id="Cdiv">&nbsp</div></center></button> </div>
+         <br>
+            <div class="tooltip">  <span class="tooltiptext">2 Hour Delay</span>  <p id="daySelectTxt4">D</p><button type="button" id="buttonD" class="checkButton buttonD" onclick="Dpressed();"><center><div id="Ddiv">&nbsp</div></center></button> </div>
+          <br>
+          <p id="tabTxt">Settings</p>
+          <div class="tooltip">
+            <span class="tooltiptext">Changes Tab Title to end of day from closest period</span>
+            <button class="tabTitleButton" type="button" id="tabTitleButton" onclick="tabSwitch();">
+              Tab Title
+            </button>
+          </div>
+          <br>
+          <div class="tooltip">
+            <span class="tooltiptext">Subtracts 3 minutes from the actual time</span>
+            <button class="lunchModebutton" id="lunchModebutton" type="button" onclick="lunch();">
+              Lunch Mode
+            </button>
+          </div>
+          <br>
+          <div id="yearContainer">
+            <p id="getDate">0</p>
+          </div> <br>
+          <p id="endYearTxt">Weeks Until<br>Summer Break</p>
+          </center>
+        </div>
+        
+       
+        <div id="Progress_Status" onmouseover="progressTheBar();"> 
+          <div id="myprogressBar"></div> 
+        </div> 
+          <div class="tooltipPercent">
+            <span class="tooltiptext">School Year Progress Bar</span>
+        <p id="progressPercent">100%</p>
+        </div>
+      </center>
+    </div>
+    <div id="like">
+    </div>
+  </form>
+  <span id="result"></span>
+  <p id="firstEndText"><b>Period 1 Ends In:&nbsp</b></p>
+  <p id="firstEnd"></p>
+  <br>
+  <p id="secondEndText"><b>Period 2 Ends In:&nbsp</b></p>
+  <p id="secondEnd"></p>
+  <br>
+  <p id="thirdEndText"><b>Period 3 Ends In:&nbsp</b></p>
+  <p id="thirdEnd"></p>
+  <br>
+  <p id="fourthEndText"><b>Period 4 Ends In:&nbsp</b></p>
+  <p id="fourthEnd"></p>
+  <br>
+  <p id="fifthEndText"><b>Period 5 Ends In:&nbsp</b></p>
+  <p id="fifthEnd"></p>
+  <br>
+  <p id="sixthEndText"><b>Period 6 Ends In:&nbsp</b></p>
+  <p id="sixthEnd"></p>
+  <br>
+  <p id="seventhEndText"><b>Period 7 Ends In:&nbsp</b></p>
+  <p id="seventhEnd"></p>
+  <br>
+  <p id="eighthEndText"><b>Period 8 Ends In:&nbsp</b></p>
+  <p id="eighthEnd"></p>
+  <br>
+  <p id="endText"><b>End of School In: &nbsp &nbsp</b></p>
+  <p id="time"></p>
+  <br>
+    <p onclick="notes();" id="versionNumber">Version 7.1 </p><p id="copy">&vert; Made by </p><p id="myName">Luke Gutman &nbsp</p>
+  <p id="title"></p>
+  <input type="button" class="colorPicker" value="Color Picker" id="myBtn" onclick="moveColor();">
+  <button onclick="stuff();" id="feature" class="feature">More Stuff</button>
+  <center>
+    <div id="light">
+      <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+      <video id="VisaChipCardVideo" width="100%" controls>
+        <source src="https://cdn.glitch.com/b41ac94d-c334-488c-802a-1b6b7a8c75e8%2FSchool%20Timer.mp4?1557275092841" type="video/mp4">
+      </video>
+    </div>
+    <div id="fade" onclick="lightbox_close();"></div>
+  </center>
+</body>
+</html>
+
+<script src="JSmainScript.js"></script>

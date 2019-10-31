@@ -1,0 +1,180 @@
+.tabTitleButton {
+  margin-top: 0%;
+  padding: 0px 10px 0px 10px;
+  font-size: 2.5vh;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 0px 0px 0px;
+   height: 7%;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 5px;
+  background-color: #101214;
+   width:10vw;
+  moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.tabtitleButton:hover {
+  transform: scale(1.1);
+}
+
+.lunchModeButton {
+  margin-top: 100%;
+  padding: 0px 5px 0px 5px;
+   font-size: 2.5vh;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 0px;
+   height: 7%;
+  width:10vw;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 5px;
+  background-color: #101214;
+  moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.lunchModeButton:hover {
+  transform: scale(1.1);
+}
+
+.buttons {
+  margin: 10%;
+  text-align: center;
+}
+.betaButton {
+  padding: 0px 10px 0px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 0px 0px 0px 10px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: #db3d3d;
+}
+
+.feature {
+  font-size: 2vh;
+  color: #fff;
+  cursor: pointer;
+  margin: 0px 0px 0px 0px;
+  height: 5vh;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: #15161A;
+  outline: 0 none;
+}
+.feature:hover {
+  transform: scale(1.1);
+}
+
+.colorPicker {
+  word-break: break-all;
+  margin-top: 100%;
+  padding: 0px 5px 0px 5px;
+  font-size: 2.5vh;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  height: 7%;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 5px;
+  background-color: #101214;
+   width:10vw;
+  moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: #101214;
+  outline: 0 none;
+}
+
+.colorPicker:hover {
+  transform: scale(1.1);
+}
+
+.vidButton {
+  width: 120px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 0px 0px 0px 10px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: #db3d3d;
+}
+.video {
+  width: 175px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 7px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: #db3d3d;
+}
+
+.button {
+  background-color: #00bfa7;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: Arial;
+  float: right;
+}
+
+button:focus {
+  outline: 0;
+}

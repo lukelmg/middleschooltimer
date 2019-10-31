@@ -1,0 +1,113 @@
+
+ .sliderTab {
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #40444f;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+ .sliderTab:before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+ 
+}
+ input:checked + .sliderTab {
+  background-color: #a8a8a8;
+}
+ input:focus + .sliderTab {
+  box-shadow: 0 0 0px black;
+}
+ input:checked + .sliderTab:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+ .sliderTab.round {
+  border-radius: 34px;
+  display: inline-block;
+}
+ .sliderTab.round:before {
+  border-radius: 50%;
+  display: inline-block;
+} .switch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+    position: relative;
+     bottom: 0px;
+     left: 0px;
+     z-index: 99;
+  margin-top: 0px;
+   margin-bottom: 0px;
+  
+}
+ .switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  
+}
+
+
+
+
+ .sliderTab2 {
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #40444f;    /*background 1*/
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+ .sliderTab2:before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white; /* dot */
+  -webkit-transition: .4s;
+  transition: .4s;
+ 
+}
+ input:checked + .sliderTab2 {
+  background-color: #a8a8a8;     /*background 2*/
+}
+ input:focus + .sliderTab2 {
+  box-shadow: 0 0 0px black;
+}
+ input:checked + .sliderTab2:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+ .sliderTab2.round {
+  border-radius: 34px;
+  display: inline-block;
+}
+ .sliderTab2.round:before {
+  border-radius: 50%;
+  display: inline-block;
+}

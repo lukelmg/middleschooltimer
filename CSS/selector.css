@@ -1,0 +1,150 @@
+body {
+  margin: 0 0 0 0;
+}
+
+#values {
+  color: #f1f1f1;
+  font-size: 0px;
+}
+
+#preset {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+#custom {
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+#colorOptions {
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background-color: 4a4d5c;
+  color: white;
+  width: 80%;
+  height: 30px;
+  font-size: 0.8em;
+  font-weight: bold;
+  moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  border-radius: 5px;
+}
+
+#colorOptions:hover {
+  transform: scale(1.1);
+}
+
+#colorOptions:focus {
+  outline: 0;
+}
+
+#presets {
+  border: none;
+  outline: none;
+  background-color: 4a4d5c;
+  color: white;
+  width: 80%;
+  height: 30px;
+  font-size: 0.8em;
+  font-weight: bold;
+  moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  border-radius: 5px;
+}
+#presets:hover {
+  transform: scale(1.1);
+}
+
+#presets:focus {
+  outline: 0;
+}
+
+#schoolScheduleTxt {
+  color: white;
+  font-weight: bold;
+  font-family: 'Ramabhadra', sans-serif;
+  font-size: 4vh;
+  margin: 5px 3px;
+  margin-bottom: -10;
+  margin-top:0;
+}
+
+#tabTxt {
+  color: white;
+  font-weight: bold;
+  font-family: 'Ramabhadra', sans-serif;
+  font-size: 4vh;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+#lunchTxt {
+  color: white;
+  font-weight: bold;
+  font-family: 'Ramabhadra', sans-serif;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+#dayContainer,
+#dayContainerKey {
+  background-color: #212121;
+  height: 100%;
+  padding: 5px 20px;
+  margin: 0px 0px 0px 0px;
+  float: right;
+  -webkit-box-shadow: 0 0 10px 2px black;
+  -moz-box-shadow: 0 0 10px 2px black;
+  box-shadow: 0 0 10px 2px black;
+}
+
+#yearContainer {
+  background-color: #212121;
+  display: inline-block;
+  margin-top: 0px;
+  padding: 0px 0px 0px 0px;
+}
+#daySelectTxt {
+  color: white;
+  font-size: 3vh;
+  font-family: "Ramabhadra", sans-serif;
+  display: inline-block;
+  position: static;
+  margin-top: 1vh;
+  position:relative;
+  top:0vh;
+}
+
+#daySelectTxt2,
+#daySelectTxt3{
+  color: white;
+  font-size: 3vh;
+  font-family: "Ramabhadra", sans-serif;
+  display: inline-block;
+  margin-top:-150px;
+  padding-top:50px;
+  position:relative;
+  top:0vh;
+}
+
+#daySelectTxt4 {
+  color: white;
+  font-size: 3vh;
+  font-family: "Ramabhadra", sans-serif;
+  display: inline-block;
+  margin-top:-150px;
+  padding-top:50px;
+  margin-bottom:0px;
+    position:relative;
+  top:0vh;
+  display:none;
+}

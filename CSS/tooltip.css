@@ -1,0 +1,112 @@
+.tooltipPercent {
+   position: relative;
+   display: inline-block;
+   }
+   .tooltipPercent .tooltiptext {
+   visibility: hidden;
+   width: 140px;
+   background-color: 353f51;
+   color: #fff;
+   font-family: Arial;
+   font-weight: Bold;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 5px;
+   margin: 3px 5px;
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+   top: -20px;
+   right: 105%;
+   
+   }
+
+  .tooltipPercent:hover .tooltiptext {
+   visibility: visible;
+   }
+   .tooltipPercent:after {
+    content: attr(title); /* define content here */
+    ...
+    opacity: 0; /* define initial transition property */
+    -webkit-transition: opacity 1s ease-in-out; /* define transitions */
+    transition: opacity 1s ease-in-out;
+    }
+    .tooltipPercent:hover:after {
+    opacity: 1; /* provide only the final transition property */
+   }
+
+
+
+.tooltip {
+   position: relative;
+   display: inline-block;
+   }
+   .tooltip .tooltiptext {
+   visibility: hidden;
+   width: 140px;
+   background-color: #353f51;
+   color: #fff;
+   font-family: Arial;
+   font-weight: Bold;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 5px;
+   margin: 3px 5px;
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+   top: -5px;
+   right: 105%;
+   }
+
+  .tooltip:hover .tooltiptext {
+   visibility: visible;
+   }
+   .tooltip:after {
+    content: attr(title); /* define content here */
+    ...
+    opacity: 0; /* define initial transition property */
+    -webkit-transition: opacity 1s ease-in-out; /* define transitions */
+    transition: opacity 1s ease-in-out;
+    }
+    .tooltip:hover:after {
+    opacity: 1; /* provide only the final transition property */
+   }
+
+
+.tooltipA {
+   position: relative;
+   display: inline-block;
+   }
+
+   .tooltipA .tooltiptextA {
+   visibility: hidden;
+   width: 140px;
+   background-color: #353f51;
+   color: #fff;
+   font-family: Arial;
+   font-weight: Bold;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 5px;
+   margin: 3px 5px;
+   position: absolute;
+   z-index: 1;
+   top: 8px;
+   right: 105%;
+   }
+
+
+   .tooltipA:hover .tooltiptextA {
+   visibility: visible;
+   }
+   .tooltipA:after {
+    content: attr(title); /* define content here */
+    ...
+    opacity: 0; /* define initial transition property */
+    -webkit-transition: opacity 1s ease-in-out; /* define transitions */
+    transition: opacity 1s ease-in-out;
+    }
+    .tooltipA:hover:after {
+    opacity: 1; /* provide only the final transition property */
+   }

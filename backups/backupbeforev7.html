@@ -1,0 +1,219 @@
+<!-- Hello everyone looking at my code for an unknown reason! If you can find this, consider joining the beta!-->
+<html>
+  <body onload="schooltimer(); checkToggle();" scroll="no" style="overflow: hidden"></body> 
+   <head>
+     <script src="https://cdn.jsdelivr.net/npm/@jaames/iro/dist/iro.min.js"></script>
+      <link type="image/png" href="https://cdn.glitch.com/390502de-2af3-469c-b617-f038bf730a5f%2Fclock_fUV_icon.ico">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140137723-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140137723-1');
+  
+  function promo(event) {
+  ga('send', 'event', {
+    eventCategory: 'Buttons',
+    eventAction: 'promo',
+    eventLabel: event.target.href
+  });
+}
+  
+  
+</script>
+
+   </head>
+   <link rel="stylesheet" href="CSSstyle.css">
+   <link rel="stylesheet" href="CSSslider.css">
+   <link rel="stylesheet" href="CSStooltip.css">
+   <link rel="stylesheet" href="CSStimeEnd.css">
+   <link rel="stylesheet" href="CSSbutton.css">
+   <link rel="stylesheet" href="CSScheckmark.css">
+   <link rel="stylesheet" href="CSSrandom.css">
+   <form id="mainForm" name="mainForm">
+      <link rel="stylesheet" href="CSSselector.css">
+      <div id="myModal" class="modal">
+         <!-- Modal content -->
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Choose Colors Here:</h2>
+            <br>
+            <div id="color-picker-container"></div>
+            <div id="color-picker-container2"></div>
+            <div id="color-picker-container3"></div>
+            <div id="color-picker-container4"></div>
+            <div id="color-picker-container5"></div>
+            <div id="color-picker-container6"></div>
+            <div color="white" id="values"></div>
+         </div>
+      </div>
+      <div id="dayContainer">
+         <center>
+            <p id="schoolScheduleTxt">School<br>Schedule</p>
+            <div id="rates">
+               <div class="tooltip">
+                  <span class="tooltiptext">Normal</span>
+                  <label id="daySelectTxt" class="container">A
+                  <input type="radio" name="rads" value="A" id="Acheck" checked="checked">
+                  <span class="checkmark"></span>
+                  </label>
+               </div>
+               <br>
+               <div class="tooltip">
+                  <span class="tooltiptext">Homeroom</span>
+                  <label id="daySelectTxt2" class="container">B
+                  <input type="radio" name="rads" value="B" id="Bcheck">
+                  <span class="checkmark"></span>
+                  </label>
+               </div>
+               <br>
+               <div class="tooltip">
+                  <span class="tooltiptext">Early Dismissal</span>
+                  <label id="daySelectTxt3" class="container">C
+                  <input type="radio" name="rads" value="C"  id="Ccheck">
+                  <span class="checkmark"></span>
+                  </label>
+               </div>
+               <br>
+               <div class="tooltip">
+                  <span class="tooltiptext">2 Hour Delay</span>
+                  <label id="daySelectTxt4" class="container">D
+                  <input type="radio" name="rads" value="D" id="Dcheck">
+                  <span class="checkmark"></span>
+                  </label>
+               </div>
+               <br>
+               <p id="darklightTxt">Dark/Light</p>
+               <div class="tooltip">
+                  <span class="tooltiptext">Changes Theme from Dark to Light</span>
+                  <label class="switch">
+                  <input id="togglePoint" onclick="checkToggle();" type="checkbox" >
+                  <span class="slider round"></span>
+                  </label>
+               </div>
+               <p id="tabTxt">Tab Title</p>
+               <div class="tooltip">
+                  <span class="tooltiptext">Changes Tab Title to end of day from closest period</span>
+                  <label class="switch">
+                  <input id="togglePoint2" onclick="tabSwitch();" type="checkbox" >
+                  <span class="sliderTab round"></span>
+                  </label>
+               </div>
+               <p id="lunchTxt">Lunch Mode</p>
+               <div class="tooltip">
+                  <span class="tooltiptext">Calculates the End of Lunch Periods</span>
+                  <label class="switch">
+                  <input id="togglePoint3" onclick="lunch();" type="checkbox" >
+                  <span class="sliderTab round"></span>
+                  </label>
+               </div>
+              <br>
+            
+              <div id="yearContainer"> <p id="getDate">Calculating...</p> </div> <br>
+              <p id="endYearTxt">&nbsp Days of <br> School Left </p>
+            </div>
+         </center>
+      </div>
+     <div id="like">
+   
+     </div>
+   </form>
+   <span id="result"></span>
+   <p id="firstEndText"><b>Period 1 Ends In:&nbsp</b></p>
+   <p id="firstEnd"></p>
+   <br>
+   <p id="secondEndText"><b>Period 2 Ends In:&nbsp</b></p>
+   <p id="secondEnd"></p>
+   <br>
+   <p id="thirdEndText"><b>Period 3 Ends In:&nbsp</b></p>
+   <p id="thirdEnd"></p>
+   <button class="secret" id="secret" onclick="puzzle();"></button>
+   <br>
+   <p id="fourthEndText"><b>Period 4 Ends In:&nbsp</b></p>
+   <p id="fourthEnd"></p>
+   <br>
+   <p id="fifthEndText"><b>Period 5 Ends In:&nbsp</b></p>
+   <p id="fifthEnd"></p>
+   <br>
+   <p id="sixthEndText"><b>Period 6 Ends In:&nbsp</b></p>
+   <p id="sixthEnd"></p>
+   <br>
+   <p id="seventhEndText"><b>Period 7 Ends In:&nbsp</b></p>
+   <p id="seventhEnd"></p>
+   <br>
+   <p id="eighthEndText"><b>Period 8 Ends In:&nbsp</b></p>
+   <p id="eighthEnd"></p>
+   <br>
+
+ 
+   <p id="endText"><b>End of School In:&nbsp</b></p>
+   <p id="time"></p>
+   <br>
+   <p id="copy">Copyright &copy Luke Gutman, 2019</p>
+   <p id="title"></p>
+   <button onclick="lightbox_open(); promo();" class="video" id="video" id="vidButton">Promotional Video</button>
+   <button onclick="featureFunction();" id="feature" class="feature">Feature Request</button>
+   <input type="button" class="colorPicker" id="myBtn" value="Color Picker">
+   <center>
+      <div id="light">
+         <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+         <video id="VisaChipCardVideo" width="100%" controls>
+            <source src="https://cdn.glitch.com/b41ac94d-c334-488c-802a-1b6b7a8c75e8%2FSchool%20Timer.mp4?1557275092841" type="video/mp4">
+            <!--Browser does not support <video> tag -->
+         </video>
+      </div>
+      <div id="fade" onClick="lightbox_close();"></div>
+   </center>
+</html>
+<script src="JSmainScript.js"></script>
+<script src="JScolorpicker.js"></script>
+
+
+
+<style>
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  
+</style>

@@ -1,0 +1,145 @@
+<html>
+  <head>
+
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140137723-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140137723-1');
+
+  function promo(event) {
+  ga('send', 'event', {
+    eventCategory: 'Buttons',
+    eventAction: 'promo',
+    eventLabel: event.target.href
+  });
+}
+
+
+</script>
+
+
+    <link rel="icon" href="https://cdn.glitch.com/b41ac94d-c334-488c-802a-1b6b7a8c75e8%2Fclock_fUV_icon.ico">
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>More Stuff!</title>
+  </head>
+  <body>
+    <center>
+
+          <button type="button" id="bug" class="stuffButton bug" onclick="bugReport();">Bug Report</button>
+          <button type="button" id="feature" class="stuffButton feature" onclick="requestFeature();">Feature Request</button>
+          <button type="button" id="contact" class="stuffButton contact" onclick="contact();">Contact</button>
+     
+       <button type="button" id="highschool" class="stuffButton highschool" onclick="highSchool();">High School Timer</button>
+      <button type="button" id="notes" class="stuffButton notes" onclick="notes();">Release Notes</button>
+      
+     
+
+       <div id="dialog" title="Contact Information">
+        <p id="dialogTxt">Luke Gutman <br><br> Email: schooltimer@lukegutman.com</p>
+      </div>
+    </center>
+  </body>
+</html>
+
+<script>
+
+  function contact() {
+
+     $( "#dialog" ).dialog();
+  }
+
+
+function requestFeature() {
+
+  var feature;
+  var type = prompt("Enter the feature you'd like to see in the next update of schooltimer!", "");
+  if (type == null || type == "") {
+    //txt = "User cancelled the prompt.";
+  } else {
+    feature = type;
+         var xhr = new XMLHttpRequest();
+  var myURL = "https://maker.ifttt.com/trigger/feature/with/key/bc48cOTCsHu3gBrt1nX1EE?value1=" + feature;
+xhr.open("POST", myURL, true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    value: "value"
+}));
+
+
+  }
+}
+
+
+  function bugReport() {
+
+  var feature;
+  var type = prompt("Enter the bug you experienced on School Timer so that I can fix it.", "");
+  if (type == null || type == "") {
+    //txt = "User cancelled the prompt.";
+  } else {
+    feature = type;
+         var xhr = new XMLHttpRequest();
+  var myURL = "https://maker.ifttt.com/trigger/bug/with/key/bc48cOTCsHu3gBrt1nX1EE?value1=" + feature;
+xhr.open("POST", myURL, true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    value: "value"
+}));
+
+
+  }
+}
+
+  function notes() {
+  window.location.href = 'http://middleschooltimer.glitch.me/releasenotes.html';
+
+  }
+
+    function videos() {
+window.location.href = 'http://schooltimer.glitch.me/videos.html';
+  }
+
+   function mobile() {
+window.location.href = 'http://schooltimer.glitch.me/mobile.html';
+  }
+  
+  function highSchool() {
+    window.location.href = 'http://schooltimer.glitch.me';
+  }
+</script>
+
+
+<style>
+
+  #dialogTxt {
+    color: #1F2026;
+  }
+
+  body {
+    background-color: #1F2026;
+  }
+
+
+  #bug, #feature, #contact, #notes, #videos, #mobile, #highschool {
+    width: 15vw;
+    height: 15vw;
+    margin-top: 15%;
+    margin-left: .5%;
+    margin-right: .5%;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family:Arial;
+    font-weight:Bold;
+  }
+
+  .bug:hover, .feature:hover, .contact:hover, .notes:hover, .videos:hover, .mobile:hover, .highschool:hover {
+    background-color: #c2c2c2;
+  }
+
+</style>
