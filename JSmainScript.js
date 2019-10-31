@@ -1103,6 +1103,7 @@ function tick8() { //fourth Period
 
 var hnew = 10;
 var mnew = 10;
+var timeDetectnew;
 
 function ticknew() { //fourth Period
     var start = new Date;
@@ -1138,8 +1139,8 @@ function ticknew() { //fourth Period
       
         document.getElementById('newEnd').innerHTML =
             hh + ":" + mm + ":" + seconds;
-      timeDetect8 = 1;
-      if (tabControl == 'on' && timeDetect7 == 0)
+      timeDetectnew = 1;
+      if (tabControl == 'on' && timeDetect8 == 0)
       {
         document.title = hh + ":" + mm + ":" + seconds;
       }
@@ -1179,7 +1180,7 @@ function ticke() { //fourth Period
             hh + ":" + mm + ":" + seconds;
        // document.title = hh + ":" + mm + ":" + seconds;
       timeDetecte = 1;
-       if (tabControl == 'on' && timeDetect8 == 0)
+       if (tabControl == 'on' && timeDetectnew == 0)
       {
         document.title = hh + ":" + mm + ":" + seconds;
       } 
